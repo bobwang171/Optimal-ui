@@ -22,6 +22,7 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 :root {
     --button-height: 32px;
+    --button-width:14px;
     --font-size: 14px;
     --button-bg: #fff;
     --button-active-bg: #fff;
@@ -32,6 +33,7 @@
 }
 .g-button{
     height:var(--button-height);
+    width: var(--button-width);
     font-size: var(--font-size);
     background: var(--button-bg);
     border-radius: var(--border-radius);
@@ -50,7 +52,8 @@
 .iconRight{
   display: inline-flex;
   align-items: center;
-  margin: 0.1em;
+  justify-content: center;
+  vertical-align: middle;
   height: 1em;
   width: 1em;
   top: 0.25em;
