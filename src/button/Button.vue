@@ -1,37 +1,40 @@
 <template>
     <div id="app">
-       <button class="g-button" v-if="!iconPosition|| iconPosition==='left'">
-        <svg v-if="icon" class="iconLeft"><use :xlink:href="`#icon-${icon}`"></use></svg>
+        
+       <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" >
+        <div class="content">
         <slot></slot>
-       </button> 
-       <button class="g-button" v-else>
-        <slot></slot>
-        <svg v-if="icon" class="iconRight"><use :xlink:href="`#icon-${icon}`"></use></svg>
+        </div>
+        <svg class="iconRight"><use :xlink:href="`#icon-${icon}`"></use></svg>
        </button> 
     </div>
 </template>
 
 <script lang="ts">
+
     export default {
-        props:["icon","iconPosition"]
+    props: {
+            icon: {
+                type:String
+            },
+            iconPosition: {
+                type: String,
+                default:"left"
+            },
+            loading: {
+                type: Boolean,
+                default:false
+        }}
     }
 </script>
 
 
 <style lang="scss" scoped>
 *{margin: 0; padding: 0; box-sizing: border-box;}
-:root {
-    --button-height: 32px;
-    --button-width:14px;
-    --font-size: 14px;
-    --button-bg: #fff;
-    --button-active-bg: #fff;
-    --border-radius: 4px;
-    --color: #333;
-    --border-color: #999;
-    --border-color-hover: #666
-}
 .g-button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     height:var(--button-height);
     width: var(--button-width);
     font-size: var(--font-size);
@@ -39,24 +42,48 @@
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     padding: 0 1em;
-}
-.iconLeft{
+    // &:hover{
+
+    // }
+    // &:active{
+
+    // }
+    // &:focus{
+
+    // }
+    >.content{
+        order: 2;
+    }
+    >.icon{
+        order: 1;
+    }
+    &.icon-right{
+        >.content{
+            order: 1;
+        }
+        >.icon{
+            order: 2;
+        }
+        
+    }
+    .iconLeft{
   display: inline-flex;
-  align-items: center;
-  margin: 0.1em;
-  height: 1em;
-  width: 1em;
-  top: 0.25em;
-  margin-right: 0.6em;
-}
-.iconRight{
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   vertical-align: middle;
   height: 1em;
   width: 1em;
-  top: 0.25em;
-  margin-left: 0.6em;
+  margin-right: 0.2em;
 }
+.iconRight{
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  height: 1em;
+  width: 1em;
+  margin-left: 0.2em;
+}
+}
+
 </style>

@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import Button from './button/Button.vue';
 </script>
 
 <template>
-  <div id="app">
-    <Button  icon="setting" icon-position="left">
-     <span>按钮</span> 
-    </Button>
-        
+  <div id="app" class="app">
+   
+    <o-button  icon="setting" icon-position="left"><span>按钮</span> </o-button>
+      
+    <o-button  icon="setting" icon-position="right"><span>按钮</span> </o-button>
+      
+    <o-button  icon="setting"><span>按钮</span> </o-button>
+      
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+.app{
+  display: flex;
 
+}
 </style>
