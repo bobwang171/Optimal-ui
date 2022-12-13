@@ -1,13 +1,10 @@
 <template>
-    <div id="app">
-        
        <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" >
+        <svg class="icon"><use :xlink:href="`#icon-${icon}`"></use></svg>
         <div class="content">
         <slot></slot>
         </div>
-        <svg class="iconRight"><use :xlink:href="`#icon-${icon}`"></use></svg>
        </button> 
-    </div>
 </template>
 
 <script lang="ts">
@@ -42,20 +39,24 @@
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color);
     padding: 0 1em;
-    // &:hover{
-
-    // }
-    // &:active{
-
-    // }
-    // &:focus{
-
-    // }
+    &:hover{
+        border: 2px solid var(--border-color-hover);
+    }
+    &:active{
+        background: var(--button-active-bg);
+    }
+    &:focus{
+        outline: none
+    }
     >.content{
         order: 2;
     }
     >.icon{
         order: 1;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.2em;
+
     }
     &.icon-right{
         >.content{
@@ -63,27 +64,11 @@
         }
         >.icon{
             order: 2;
+            margin-left: 0.2em;
         }
         
     }
-    .iconLeft{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  height: 1em;
-  width: 1em;
-  margin-right: 0.2em;
-}
-.iconRight{
-  display: inline-flex;
-  vertical-align: middle;
-  justify-content: center;
-  align-items: center;
-  height: 1em;
-  width: 1em;
-  margin-left: 0.2em;
-}
+   
 }
 
 </style>
