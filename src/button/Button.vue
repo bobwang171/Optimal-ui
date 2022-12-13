@@ -1,15 +1,19 @@
 <template>
     <div id="app">
-       <button class="g-button">
-        <svg v-if="icon" class="icon"><use :xlink:href="`#icon-${icon}`"></use></svg>
+       <button class="g-button" v-if="!iconPosition|| iconPosition==='left'">
+        <svg v-if="icon" class="iconLeft"><use :xlink:href="`#icon-${icon}`"></use></svg>
         <slot></slot>
+       </button> 
+       <button class="g-button" v-else>
+        <slot></slot>
+        <svg v-if="icon" class="iconRight"><use :xlink:href="`#icon-${icon}`"></use></svg>
        </button> 
     </div>
 </template>
 
 <script lang="ts">
     export default {
-        props:["icon"]
+        props:["icon","iconPosition"]
     }
 </script>
 
@@ -34,8 +38,22 @@
     border: 1px solid var(--border-color);
     padding: 0 1em;
 }
-.icon{
+.iconLeft{
+  display: inline-flex;
+  align-items: center;
+  margin: 0.1em;
   height: 1em;
   width: 1em;
+  top: 0.25em;
+  margin-right: 0.6em;
+}
+.iconRight{
+  display: inline-flex;
+  align-items: center;
+  margin: 0.1em;
+  height: 1em;
+  width: 1em;
+  top: 0.25em;
+  margin-left: 0.6em;
 }
 </style>

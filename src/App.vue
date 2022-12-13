@@ -4,8 +4,7 @@ import Button from './button/Button.vue';
 
 <template>
   <div id="app">
-    <Button class="button" icon="setting">
-     
+    <Button  icon="setting" icon-position="left">
      <span>按钮</span> 
     </Button>
         
