@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import Button from './button/Button.vue'
-import Icon from './button/Icon.vue'
+import Button from './button/button.vue'
+import Icon from './button/icon.vue'
 import ButtonGroup from './button/button-group.vue'
 import './style/var.scss'
 

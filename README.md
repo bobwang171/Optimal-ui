@@ -1,46 +1,42 @@
-# classic-ui
+# Optimal UI - 一个Vue UI组件
 
-This template should help get you started developing with Vue 3 in Vite.
+## 介绍
 
-## Recommended IDE Setup
+## 开始使用
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+1.安装
+使用本框架前，请在css中开启border-box
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
+*{box-sizing:border-box;}
 ```
+IE 8 及以上浏览器都支持此样式。
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
+你还需要设置默认颜色等变量（后续会改为 SCSS 变量）
+``` 
+html {
+  --button-height: 32px;
+  --font-size: 14px;
+  --button-bg: white;
+  --button-active-bg: #eee;
+  --border-radius: 4px;
+  --color: #333;
+  --border-color: #999;
+  --border-color-hover: #666;
+}
 ```
+IE 15 及以上浏览器都支持此样式。
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+安装 Optimal UI
+npm i --optimal-ui
+引入 Optimal UI
+import {Button, ButtonGroup, Icon} from 'optimal-ui'
+import 'optimal-ui/dist/index.css'
 
-```sh
-pnpm test:unit
-```
+export default {
+  name: 'app',
+  components: {
+    'o-button': Button,
+    'o-icon': Icon
+  }
+}
