@@ -1,7 +1,7 @@
 <template>
-    <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
-        <Icon v-if="name && !loading" :name="name" class="icon"></Icon>
-        <Icon v-if="loading" name="loading" class="loading icon"></Icon>
+    <button class="o-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
+        <o-icon v-if="name && !loading" :name="name" class="icon"></o-icon>
+        <o-icon v-if="loading" name="loading" class="loading icon"></o-icon>
         <div class=" content">
             <slot></slot>
         </div>
@@ -45,7 +45,7 @@ export default {
     box-sizing: border-box;
 }
 
-.g-button {
+.o-button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -59,6 +59,7 @@ export default {
 
     &:hover {
         border: 2px solid var(--border-color-hover);
+        z-index: 1;
     }
 
     &:active {
