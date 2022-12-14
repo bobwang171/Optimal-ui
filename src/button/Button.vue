@@ -1,7 +1,11 @@
 <template>
-    <button class="o-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
-        <o-icon v-if="name && !loading" :name="name" class="icon"></o-icon>
-        <o-icon v-if="loading" name="loading" class="loading icon"></o-icon>
+
+    <button class="o-button" :class="{
+        [`icon-${iconPosition}`]: true,
+        [`disabled-${disabled}`]: true
+    }" @click="$emit('click')">
+        <o-icon v-if="name && !loading && !disabled" :name="name" class="icon"></o-icon>
+        <o-icon v-if="loading && !disabled" name="loading" class="loading icon"></o-icon>
         <div class=" content">
             <slot></slot>
         </div>
@@ -20,6 +24,10 @@ export default {
             default: "left"
         },
         loading: {
+            type: Boolean,
+            default: false
+        },
+        disabled: {
             type: Boolean,
             default: false
         }
@@ -58,7 +66,7 @@ export default {
     padding: 0 1em;
 
     &:hover {
-        border: 2px solid var(--border-color-hover);
+        border: 1.5px solid var(--border-color-hover);
         z-index: 1;
     }
 
@@ -78,11 +86,19 @@ export default {
         animation: spin 1s infinite linear;
     }
 
+
+
     >.icon {
         order: 1;
         width: 1em;
         height: 1em;
         margin-right: 0.2em;
+
+    }
+
+    &.disabled-true {
+        color: #C0C0C0;
+        cursor: not-allowed;
 
     }
 
