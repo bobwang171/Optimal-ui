@@ -1,17 +1,19 @@
 <template>
-  <svg class="icon"><use :xlink:href="`#icon-${$props.name}`"></use></svg>
+    <svg class="icon">
+        <use :xlink:href="`#icon-${$props.name}`"></use>
+    </svg>
 </template>
-
+  
 <script lang="ts">
-    export default {
+export default {
     props: {
-            name: {
-                type:String
-            }
+        name: {
+            type: String
         }
     }
+}
 </script>
-
+  
 <style lang="scss" scoped>
 
 </style>
