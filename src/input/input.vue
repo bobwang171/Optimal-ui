@@ -1,6 +1,7 @@
 <template >
     <div class="wrapper">
-        <input class=" o-input" :value="value" type="text" :disabled="disabled" :readonly="readonly" :error="error">
+        <input class=" o-input" :value="value" type="text" :disabled="disabled" :readonly="readonly" :error="error"
+            @input="$emit('input', $event.target?.value)">
         <div v-if="error" class="error_wrapper">
             <Icon name="warning"></Icon>
             <span>{{ error }}</span>

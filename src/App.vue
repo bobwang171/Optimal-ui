@@ -4,7 +4,8 @@ export default {
     return {
       loadingStatus1: true,
       loadingStatus2: false,
-      loadingStatus3: false
+      loadingStatus3: false,
+      massage: 'hi'
     }
   },
 }
@@ -35,7 +36,10 @@ export default {
     </div>
     <div class="input_wrapper">
       <!-- Input展示 -->
-      <o-input value="Bob"></o-input>
+      <div class="inputModel">
+        <o-input v-model="massage"></o-input>
+        <span>{{ massage }}</span>
+      </div>
       <o-input value="Susan" :disabled="true"></o-input>
       <o-input value="Kevin" :readonly="true"></o-input>
       <o-input value="Bob" error="姓名不能少于两个字"></o-input>
@@ -62,6 +66,17 @@ export default {
   .input_wrapper {
     display: flex;
     margin-bottom: 20px;
+    align-items: flex-start;
+
+    >.inputModel {
+      display: flex;
+      flex-direction: column;
+
+      >span {
+        font-size: 12px;
+        padding-left: 8px;
+      }
+    }
 
     >.o-input {
       margin-right: 20px;
