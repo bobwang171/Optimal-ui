@@ -28,8 +28,11 @@ html {
 IE 15 及以上浏览器都支持此样式。
 
 安装 Optimal UI
+```
 npm i --optimal-ui
+```
 引入 Optimal UI
+```
 import {Button, ButtonGroup, Icon} from 'optimal-ui'
 import 'optimal-ui/dist/index.css'
 
@@ -40,3 +43,4 @@ export default {
     'o-icon': Icon
   }
 }
+```

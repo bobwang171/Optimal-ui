@@ -35,7 +35,10 @@ export default {
     </div>
     <div class="input_wrapper">
       <!-- Input展示 -->
-      <o-input></o-input>
+      <o-input value="Bob"></o-input>
+      <o-input value="Susan" :disabled="true"></o-input>
+      <o-input value="Kevin" :readonly="true"></o-input>
+      <o-input value="Bob" error="姓名不能少于两个字"></o-input>
     </div>
   </div>
 </template>
@@ -49,13 +52,20 @@ export default {
     display: flex;
     margin-bottom: 20px;
 
-    >button {
+    >.o-button {
       margin-right: 1em;
     }
+
+
   }
 
   .input_wrapper {
     display: flex;
+    margin-bottom: 20px;
+
+    >.o-input {
+      margin-right: 20px;
+    }
 
   }
 
