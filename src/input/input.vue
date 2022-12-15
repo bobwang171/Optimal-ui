@@ -34,7 +34,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-$height: 32px;
+$height: 24px;
 $border-color: #999;
 $border-color-hover: #666;
 $border-radius :4px;
@@ -53,6 +53,7 @@ $error-color: #f1453d;
         border-radius: $border-radius;
         border: 1px solid $border-color;
         margin: 0 8px;
+        height: $height;
 
         &:focus {
             box-shadow: inset 0 1px 3px $border-color-hover;

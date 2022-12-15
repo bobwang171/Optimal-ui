@@ -13,6 +13,7 @@ export default {
 
 <template>
   <div id="app" class="app">
+
     <div class="button_wrapper">
       <!-- button 按钮展示 -->
       <o-button :loading="loadingStatus1" @click="loadingStatus1 = !loadingStatus1" name="setting"
@@ -38,13 +39,16 @@ export default {
       <!-- Input展示 -->
       <div class="inputModel">
         <o-input v-model="massage"></o-input>
-        <span>{{ massage }}</span>
+        <span>Value: {{ massage }}</span>
       </div>
       <o-input value="Susan" :disabled="true"></o-input>
       <o-input value="Kevin" :readonly="true"></o-input>
-      <o-input value="Bob" error="姓名不能少于两个字"></o-input>
+      <o-input value="Bob" error="错误信息"></o-input>
     </div>
+    <!-- grid 格栅展示 -->
+    <div></div>
   </div>
+
 </template>
 
 <style lang="scss" scoped>
