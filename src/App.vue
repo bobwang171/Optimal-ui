@@ -54,6 +54,7 @@ export default {
         <o-col span="8" class="col-item">111</o-col>
         <o-col span="8" class="col-item">111</o-col>
         <o-col span="8" class="col-item">111</o-col>
+
       </o-row>
     </div>
   </div>
@@ -104,8 +105,9 @@ export default {
       padding: .2em;
 
       >.col-item {
-        height: 50px;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         color: white;
 
         &:nth-child(odd) {
