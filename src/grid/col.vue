@@ -4,7 +4,7 @@
     </div>
 </template>
 <script lang="ts">
-let validator = (value) => {
+let validator = (value: string) => {
     let keys = Object.keys(value)
     let valid = true
     keys.forEach(key => {
@@ -77,7 +77,7 @@ export default {
 
     @for $n from 1 through 24 {
         &.#{$class-prefix}#{$n} {
-            margin-left: ($n / 24) * 100%;
+            width: ($n / 24) * 100%;
         }
     }
 

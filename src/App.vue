@@ -46,7 +46,16 @@ export default {
       <o-input value="Bob" error="错误信息"></o-input>
     </div>
     <!-- grid 格栅展示 -->
-    <div></div>
+    <div class="grid-wrapper">
+      <o-row class="row">
+        <o-col span="24" class="col-item">111</o-col>
+      </o-row>
+      <o-row class="row">
+        <o-col span="1" class="col-item">111</o-col>
+        <o-col span="22" class="col-item">111</o-col>
+        <o-col span="1" class="col-item">111</o-col>
+      </o-row>
+    </div>
   </div>
 
 </template>
@@ -88,5 +97,28 @@ export default {
 
   }
 
+  .grid-wrapper {
+    $background: #3eaf7c;
+
+    >.row {
+      padding: .2em;
+
+      >.col-item {
+        height: 50px;
+        border: 1px solid red;
+        text-align: center;
+        color: white;
+
+        &:nth-child(odd) {
+          background: $background;
+        }
+
+        &:nth-child(even) {
+          background: lighten($background, 20%);
+          color: black;
+        }
+      }
+    }
+  }
 }
 </style>
