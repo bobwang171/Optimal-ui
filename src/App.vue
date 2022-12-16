@@ -51,9 +51,9 @@ export default {
         <o-col span="24" class="col-item">111</o-col>
       </o-row>
       <o-row class="row">
-        <o-col span="1" class="col-item">111</o-col>
-        <o-col span="22" class="col-item">111</o-col>
-        <o-col span="1" class="col-item">111</o-col>
+        <o-col span="8" class="col-item">111</o-col>
+        <o-col span="8" class="col-item">111</o-col>
+        <o-col span="8" class="col-item">111</o-col>
       </o-row>
     </div>
   </div>
@@ -105,7 +105,6 @@ export default {
 
       >.col-item {
         height: 50px;
-        border: 1px solid red;
         text-align: center;
         color: white;
 
