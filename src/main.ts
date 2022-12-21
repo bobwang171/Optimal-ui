@@ -12,6 +12,8 @@ import Footer from './layouts/footer.vue'
 import Header from './layouts/header.vue'
 import Layout from './layouts/layout.vue'
 import Sider from './layouts/sider.vue'
+import Toast from './toast/toast.vue'
+import plugin from './plugin.js'
 import './style/var.scss'
 
 
@@ -26,7 +28,9 @@ Vue.component("o-footer", Footer)
 Vue.component("o-header", Header)
 Vue.component("o-layout", Layout)
 Vue.component("o-sider", Sider)
+Vue.component("o-toast", Toast)
+Vue.use(plugin)
 new Vue({
   router,
-  render: (h) => h(App)
+  render: (h) => h(App),
 }).$mount('#app')

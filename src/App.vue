@@ -8,22 +8,20 @@ export default {
       massage: 'hi'
     }
   },
+  methods: {
+    showToast() {
+      this.$toast('toastData')
+    }
+  }
 }
 </script>
 
 <template>
   <div id="app" class="app">
 
-
-    <o-layout style="height: 100vh;">
-      <o-header class="demo">header</o-header>
-
-      <o-layout>
-        <o-content class="demo">content</o-content>
-        <o-sider class="demo">sider</o-sider>
-      </o-layout>
-      <o-footer class="demo">footer</o-footer>
-    </o-layout>
+    <div>
+      <button @click="showToast"> 点我</button>
+    </div>
   </div>
 
 </template>
