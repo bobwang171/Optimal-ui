@@ -1,5 +1,5 @@
 <template >
-    <div class="toast">
+    <div class="toast" :class="positionClass">
         <div v-if="enableHTML" v-html="$slots.default[0]"></div>
         <slot v-else></slot>
         <div v-if="closeButton" class="close" @click="onClickClose">
@@ -33,6 +33,19 @@ export default {
                 }
 
             }
+        },
+        position: {
+            type: String,
+            default: 'top',
+            validator(value) {
+                return ['top', 'bottom', 'middle'].indexOf(value) >= 0
+            }
+
+        }
+    },
+    computed: {
+        positionClass() {
+            return { [`position-${this.position}`]: true }
         }
     },
     mounted() {
@@ -70,13 +83,26 @@ $min-height: 40px;
     position: absolute;
     display: flex;
     align-items: center;
-    top: 0;
     left: 50%;
-    transform: translate(-50%);
     border-radius: 4px;
     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
     background-color: #404040;
-    padding: 0 16px
+    padding: 0 16px;
+
+    &.position-top {
+        position: absolute;
+        top: 8px;
+    }
+
+    &.position-bottom {
+        bottom: 8px;
+    }
+
+    &.position-middle {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .close {

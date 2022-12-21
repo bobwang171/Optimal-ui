@@ -10,7 +10,7 @@ export default {
   },
   methods: {
     showToast() {
-      this.$toast('我是toast', { enableHTML: true })
+      this.$toast(`我是toast${Math.random() * 100}`, { enableHTML: true, position: "bottom" })
     }
   }
 }
