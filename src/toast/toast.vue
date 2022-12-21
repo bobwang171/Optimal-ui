@@ -1,6 +1,7 @@
 <template >
     <div class="toast">
-        <slot></slot>
+        <div v-if="enableHTML" v-html="$slots.default[0]"></div>
+        <slot v-else></slot>
         <div v-if="closeButton" class="close" @click="onClickClose">
             {{ closeButton.text }}
         </div>
@@ -10,6 +11,10 @@
 export default {
     name: "optimal-toast",
     props: {
+        enableHTML: {
+            type: Boolean,
+            default: false
+        },
         autoClose: {
             type: Boolean,
             default: true
@@ -23,8 +28,7 @@ export default {
             default: () => {
                 return {
                     text: "关闭",
-                    callback: (toast) => {
-                        toast.close()
+                    callback: () => {
                     }
                 }
 
@@ -46,7 +50,9 @@ export default {
         },
         onClickClose() {
             this.close()
-            this.closeButton.callback()
+            if (this.closeButton && typeof this.closeButton.callback === "function") {
+                this.closeButton.callback()
+            }
         }
     }
 }
@@ -54,14 +60,14 @@ export default {
 <style lang="scss">
 $font-size: 16px;
 $line-height: 2.2;
-$height: 40px;
+$min-height: 40px;
 
 .toast {
     font-size: $font-size;
     color: aliceblue;
     line-height: $line-height;
-    height: $height;
-    position: fixed;
+    min-height: $min-height;
+    position: absolute;
     display: flex;
     align-items: center;
     top: 0;
@@ -75,7 +81,9 @@ $height: 40px;
 
 .close {
     border-left: 2px solid #666;
-    padding-left: 5px;
-    margin-left: 5px;
+    padding-left: 8px;
+    margin-left: 8px;
+    flex-shrink: 0;
+    cursor: pointer;
 }
 </style>

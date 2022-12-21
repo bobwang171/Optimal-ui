@@ -10,7 +10,7 @@ export default {
   },
   methods: {
     showToast() {
-      this.$toast('我是toast')
+      this.$toast('我是toast', { enableHTML: true })
     }
   }
 }
@@ -22,7 +22,6 @@ export default {
     <div>
       <button @click="showToast"> 点我</button>
     </div>
-
   </div>
 
 </template>
