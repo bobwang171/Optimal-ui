@@ -75,7 +75,42 @@ $font-size: 16px;
 $line-height: 2.2;
 $min-height: 40px;
 
+@keyframes fade-in-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+@keyframes fade-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fade-in-middle {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .toast {
+
     font-size: $font-size;
     color: aliceblue;
     line-height: $line-height;
@@ -89,19 +124,23 @@ $min-height: 40px;
     background-color: #404040;
     padding: 0 16px;
 
+
     &.position-top {
         position: absolute;
         top: 8px;
+        animation: fade-in-top 0.5s;
     }
 
     &.position-bottom {
         bottom: 8px;
+        animation: fade-in-bottom 0.5s;
     }
 
     &.position-middle {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        animation: fade-in-middle 0.5s;
     }
 }
 
