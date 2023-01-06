@@ -13,6 +13,11 @@ import Header from './layouts/header.vue'
 import Layout from './layouts/layout.vue'
 import Sider from './layouts/sider.vue'
 import Toast from './toast/toast.vue'
+import Tabs from './tabs/tabs.vue'
+import TabsBody from './tabs/tabs-body.vue'
+import TabsHead from './tabs/tabs-head.vue'
+import TabsPane from './tabs/tabs-pane.vue'
+import TabsItem from './tabs/tabs-item.vue'
 import plugin from './plugin.js'
 import './style/var.scss'
 
@@ -29,6 +34,11 @@ Vue.component("o-header", Header)
 Vue.component("o-layout", Layout)
 Vue.component("o-sider", Sider)
 Vue.component("o-toast", Toast)
+Vue.component("o-tabs-body", TabsBody)
+Vue.component("o-tabs-head", TabsHead)
+Vue.component("o-tabs-item", TabsItem)
+Vue.component("o-tabs-pane", TabsPane)
+Vue.component("o-tabs",Tabs)
 Vue.use(plugin)
 new Vue({
   router,
