@@ -5,7 +5,12 @@
 </template>
 <script lang="ts">
 export default {
-    name: "optimal-tabs-body"
+    name: "optimal-tabs-body",
+    inject: ['eventBus'],
+    created() {
+        console.log("爷爷给body的eventbus")
+        console.log(this.eventBus)
+    }
 }
 </script>
 <style lang="scss">

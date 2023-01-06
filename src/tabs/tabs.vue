@@ -4,6 +4,7 @@
     </div>
 </template>
 <script lang="ts">
+import Vue from 'vue';
 export default {
     name: "optimal-tabs",
     props: {
@@ -14,15 +15,24 @@ export default {
         },
         direction: {
             type: String,
-            required: true,
             default: 'horizontal',
             validator(value) {
                 return ['horizontal', 'vertical'].indexOf(value) >= 0
             }
         }
     },
-    created() {
-        this.$emit("update:selected", 'xxx')
+    data() {
+        return {
+            eventBus: new Vue()
+        }
+    },
+    provide() {
+        return {
+            eventBus: this.eventBus
+        }
+    },
+    mounted() {
+        this.eventBus.$emit("update:selected", this.selected)
     }
 }
 </script>
