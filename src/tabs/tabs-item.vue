@@ -46,6 +46,7 @@ export default {
     flex-shrink: 0;
     padding: 0 2em 0.2em 2em;
     cursor: pointer;
+    border-bottom: 2px solid #f6f5f6;
 
     &.active {
         color: #3EAF7C;
