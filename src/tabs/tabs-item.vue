@@ -37,16 +37,23 @@ export default {
         name: {
             type: String,
         }
-    }
+    },
+
 }
 </script>
 <style lang="scss" scoped>
 .tabs-item {
     flex-shrink: 0;
-    padding: 0 2em;
+    padding: 0 2em 0.2em 2em;
+    cursor: pointer;
 
     &.active {
-        background: red;
+        color: #3EAF7C;
+        border-bottom: 2px solid #3EAF7C;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
     }
 }
 </style>
