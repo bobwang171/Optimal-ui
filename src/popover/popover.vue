@@ -1,6 +1,8 @@
 <template>
     <div class="popover" @click="xxx">
-        <slot name="content" v-if="visible"></slot>
+        <div v-if="visible">
+            <slot name="content"></slot>
+        </div>
         <slot></slot>
     </div>
 </template>
@@ -21,6 +23,7 @@ export default {
 </script>
 <style lang="scss">
 .popover {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
 }
 </style>
