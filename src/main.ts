@@ -18,6 +18,7 @@ import TabsBody from './tabs/tabs-body.vue'
 import TabsHead from './tabs/tabs-head.vue'
 import TabsPane from './tabs/tabs-pane.vue'
 import TabsItem from './tabs/tabs-item.vue'
+import Popover from './popover/popover.vue'
 import plugin from './plugin.js'
 import './style/var.scss'
 
@@ -38,7 +39,8 @@ Vue.component("o-tabs-body", TabsBody)
 Vue.component("o-tabs-head", TabsHead)
 Vue.component("o-tabs-item", TabsItem)
 Vue.component("o-tabs-pane", TabsPane)
-Vue.component("o-tabs",Tabs)
+Vue.component("o-tabs", Tabs)
+Vue.component("o-popover",Popover)
 Vue.use(plugin)
 new Vue({
   router,

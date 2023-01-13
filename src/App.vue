@@ -40,9 +40,22 @@ export default {
         <o-tabs-pane name="sports">体育相关资讯</o-tabs-pane>
       </o-tabs-body>
     </o-tabs>
-  </div>
 
+    <o-popover>
+      <template slot="content">
+        <div>visible内容</div>
+      </template>
+      <button>点我</button>
+    </o-popover>
+    <o-popover>
+      <template slot="content">
+        <div>visible内容</div>
+      </template>
+      <button>点我</button>
+    </o-popover>
+  </div>
 </template>
+
 
 <style lang="scss" scoped>
 .app {
