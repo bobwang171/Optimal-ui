@@ -58,7 +58,6 @@ export default {
     justify-content: center;
     align-items: center;
     height: 32px;
-    width: var(--button-width);
     font-size: 14px;
     background: #fff;
     border-radius: 4px;
