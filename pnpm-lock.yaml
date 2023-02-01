@@ -13,7 +13,9 @@ specifiers:
   node: 16.0.0
   npm-run-all: ^4.1.5
   sass: 1.56.2
+  sass-loader: 7.0.1
   scss: 0.2.4
+  scss-loader: 0.0.1
   terser: ^5.14.2
   typescript: ~4.7.4
   vite: ^3.0.2
@@ -42,6 +44,8 @@ devDependencies:
   node: registry.npmmirror.com/node/16.0.0
   npm-run-all: registry.npmmirror.com/npm-run-all/4.1.5
   sass: registry.npmmirror.com/sass/1.56.2
+  sass-loader: registry.npmmirror.com/sass-loader/7.0.1
+  scss-loader: registry.npmmirror.com/scss-loader/0.0.1
   terser: registry.npmmirror.com/terser/5.16.1
   typescript: registry.npmmirror.com/typescript/4.7.4
   vite: registry.npmmirror.com/vite/3.2.5_nmk5z5lhnf4ymqlwzjfpa3avku
@@ -4239,6 +4243,18 @@ packages:
       wrap-ansi: registry.npmmirror.com/wrap-ansi/5.1.0
     dev: true
 
+  registry.npmmirror.com/clone-deep/2.0.2:
+    resolution: {integrity: sha512-SZegPTKjCgpQH63E+eN6mVEEPdQBOUzjyJm5Pora4lrwWRFS8I0QAxV/KD6vV/i0WuijHZWQC1fMsPEdxfdVCQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/clone-deep/-/clone-deep-2.0.2.tgz}
+    name: clone-deep
+    version: 2.0.2
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      for-own: registry.npmmirror.com/for-own/1.0.0
+      is-plain-object: registry.npmmirror.com/is-plain-object/2.0.4
+      kind-of: registry.npmmirror.com/kind-of/6.0.3
+      shallow-clone: registry.npmmirror.com/shallow-clone/1.0.0
+    dev: true
+
   registry.npmmirror.com/clone-response/1.0.3:
     resolution: {integrity: sha512-ROoL94jJH2dUVML2Y/5PEDNaSHgeOdSDicUyS7izcF63G6sTc/FTjLub4b8Il9S8S0beOfYt0TaA5qvFK+w0wA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/clone-response/-/clone-response-1.0.3.tgz}
     name: clone-response
@@ -6716,11 +6732,27 @@ packages:
       debug: registry.npmmirror.com/debug/4.3.4_supports-color@6.1.0
     dev: true
 
+  registry.npmmirror.com/for-in/0.1.8:
+    resolution: {integrity: sha512-F0to7vbBSHP8E3l6dCjxNOLuSFAACIxFy3UehTUlG7svlXi37HHsDkyVcHo0Pq8QwrE+pXvWSVX3ZT1T9wAZ9g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/for-in/-/for-in-0.1.8.tgz}
+    name: for-in
+    version: 0.1.8
+    engines: {node: '>=0.10.0'}
+    dev: true
+
   registry.npmmirror.com/for-in/1.0.2:
     resolution: {integrity: sha512-7EwmXrOjyL+ChxMhmG5lnW9MPt1aIeZEwKhQzoBUdTV0N3zuwWDZYVJatDvZ2OyzPUvdIAZDsCetk3coyMfcnQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/for-in/-/for-in-1.0.2.tgz}
     name: for-in
     version: 1.0.2
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  registry.npmmirror.com/for-own/1.0.0:
+    resolution: {integrity: sha512-0OABksIGrxKK8K4kynWkQ7y1zounQxP+CWnyclVwj81KW3vlLlGUx57DKGcP/LH216GzqnstnPocF16Nxs0Ycg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/for-own/-/for-own-1.0.0.tgz}
+    name: for-own
+    version: 1.0.0
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      for-in: registry.npmmirror.com/for-in/1.0.2
     dev: true
 
   registry.npmmirror.com/foreach/2.0.6:
@@ -8618,6 +8650,12 @@ packages:
     version: 4.1.2
     dev: true
 
+  registry.npmmirror.com/lodash.tail/4.1.1:
+    resolution: {integrity: sha512-+7y6zfkH4TqgS5DYKIqJuxmL5xT3WUUumVMZVRpDUo0UqJREwZqKmGo9wluj12FbPGl1UjRf2TnAImbw/bKtdw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.tail/-/lodash.tail-4.1.1.tgz}
+    name: lodash.tail
+    version: 4.1.1
+    dev: true
+
   registry.npmmirror.com/lodash.template/4.5.0:
     resolution: {integrity: sha512-84vYFxIkmidUiFxidA/KjjH9pAycqW+h980j7Fuz5qxRtO9pgB7MDFTdys1N7A5mcucRiDyEq4fusljItR1T/A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lodash.template/-/lodash.template-4.5.0.tgz}
     name: lodash.template
@@ -9087,6 +9125,16 @@ packages:
     dependencies:
       for-in: registry.npmmirror.com/for-in/1.0.2
       is-extendable: registry.npmmirror.com/is-extendable/1.0.1
+    dev: true
+
+  registry.npmmirror.com/mixin-object/2.0.1:
+    resolution: {integrity: sha512-ALGF1Jt9ouehcaXaHhn6t1yGWRqGaHkPFndtFVHfZXOvkIZ/yoGaSi0AHVTafb3ZBGg4dr/bDwnaEKqCXzchMA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/mixin-object/-/mixin-object-2.0.1.tgz}
+    name: mixin-object
+    version: 2.0.1
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      for-in: registry.npmmirror.com/for-in/0.1.8
+      is-extendable: registry.npmmirror.com/is-extendable/0.1.1
     dev: true
 
   registry.npmmirror.com/mkdirp/0.3.0:
@@ -11098,6 +11146,21 @@ packages:
     version: 2.1.2
     dev: true
 
+  registry.npmmirror.com/sass-loader/7.0.1:
+    resolution: {integrity: sha512-MeVVJFejJELlAbA7jrRchi88PGP6U9yIfqyiG+bBC4a9s2PX+ulJB9h8bbEohtPBfZmlLhNZ0opQM9hovRXvlw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/sass-loader/-/sass-loader-7.0.1.tgz}
+    name: sass-loader
+    version: 7.0.1
+    engines: {node: '>= 6.9.0 || >= 8.9.0'}
+    peerDependencies:
+      webpack: ^3.0.0 || ^4.0.0
+    dependencies:
+      clone-deep: registry.npmmirror.com/clone-deep/2.0.2
+      loader-utils: registry.npmmirror.com/loader-utils/1.4.2
+      lodash.tail: registry.npmmirror.com/lodash.tail/4.1.1
+      neo-async: registry.npmmirror.com/neo-async/2.6.2
+      pify: registry.npmmirror.com/pify/3.0.0
+    dev: true
+
   registry.npmmirror.com/sass/1.56.2:
     resolution: {integrity: sha512-ciEJhnyCRwzlBCB+h5cCPM6ie/6f8HrhZMQOf5vlU60Y1bI1rx5Zb0vlDZvaycHsg/MqFfF1Eq2eokAa32iw8w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/sass/-/sass-1.56.2.tgz}
     name: sass
@@ -11145,6 +11208,12 @@ packages:
       '@types/json-schema': registry.npmmirror.com/@types/json-schema/7.0.11
       ajv: registry.npmmirror.com/ajv/6.12.6
       ajv-keywords: registry.npmmirror.com/ajv-keywords/3.5.2_ajv@6.12.6
+    dev: true
+
+  registry.npmmirror.com/scss-loader/0.0.1:
+    resolution: {integrity: sha512-SbT/smRJjkvvdHSEdAYAplosVkrtaSwwgUlnQCOuDS5sOKNjrS/eYCMvKeV6+YxK5cCOCsOJZd3vltrXatFp+g==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/scss-loader/-/scss-loader-0.0.1.tgz}
+    name: scss-loader
+    version: 0.0.1
     dev: true
 
   registry.npmmirror.com/scss/0.2.4:
@@ -11320,6 +11389,17 @@ packages:
     dependencies:
       inherits: registry.npmmirror.com/inherits/2.0.4
       safe-buffer: registry.npmmirror.com/safe-buffer/5.2.1
+    dev: true
+
+  registry.npmmirror.com/shallow-clone/1.0.0:
+    resolution: {integrity: sha512-oeXreoKR/SyNJtRJMAKPDSvd28OqEwG4eR/xc856cRGBII7gX9lvAqDxusPm0846z/w/hWYjI1NpKwJ00NHzRA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/shallow-clone/-/shallow-clone-1.0.0.tgz}
+    name: shallow-clone
+    version: 1.0.0
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      is-extendable: registry.npmmirror.com/is-extendable/0.1.1
+      kind-of: registry.npmmirror.com/kind-of/5.1.0
+      mixin-object: registry.npmmirror.com/mixin-object/2.0.1
     dev: true
 
   registry.npmmirror.com/shebang-command/1.2.0:

@@ -57,21 +57,21 @@ export default {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: var(--button-height);
+    height: 32px;
     width: var(--button-width);
-    font-size: var(--font-size);
-    background: var(--button-bg);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
+    font-size: 14px;
+    background: #fff;
+    border-radius: 4px;
+    border: 1px solid #999;
     padding: 0 1em;
 
     &:hover {
-        border: 1.5px solid var(--border-color-hover);
+        border: 1.5px solid #666;
         z-index: 1;
     }
 
     &:active {
-        background: var(--button-active-bg);
+        background: #fff;
     }
 
     &:focus {
