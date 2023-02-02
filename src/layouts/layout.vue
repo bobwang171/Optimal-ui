@@ -13,7 +13,7 @@ export default {
     },
     mounted() {
         this.$children.map((item) => {
-            if (item.$options.name === "o-sider") {
+            if (item.$options._componentTag === "o-sider") {
                 this.layoutClass.hasSider = true
             }
         })
