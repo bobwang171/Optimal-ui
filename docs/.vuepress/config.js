@@ -27,5 +27,8 @@ module.exports = {
               },
 
       ]
-    }
+    },
+    head:[
+        ["script", { src: "//at.alicdn.com/t/c/font_3824556_0tb9b4otg41.js" }]
+      ]
   }

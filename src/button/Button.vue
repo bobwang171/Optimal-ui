@@ -1,15 +1,20 @@
 <template>
-
-    <button class="o-button" :class="{
-        [`icon-${iconPosition}`]: true,
-        [`disabled-${disabled}`]: true
-    }" @click="$emit('click')">
-        <o-icon v-if="name && !loading && !disabled" :name="name" class="icon"></o-icon>
-        <o-icon v-if="loading && !disabled" name="loading" class="loading icon"></o-icon>
-        <div class=" content">
-            <slot></slot>
-        </div>
-    </button>
+    <div>
+        <button class="o-button" :class="{
+            [`icon-${iconPosition}`]: true,
+            [`disabled-${disabled}`]: true
+        }" @click="$emit('click')">
+            <svg v-if="name && !loading && !disabled" :name="name" class="icon">
+                <use :xlink:href="`#icon-${$props.name}`"></use>
+            </svg>
+            <svg v-if="loading && !disabled" name="loading" class="loading icon">
+                <use :xlink:href="`#icon-loading`"></use>
+            </svg>
+            <div class=" content">
+                <slot></slot>
+            </div>
+        </button>
+    </div>
 </template>
 
 <script lang="ts">
