@@ -3,17 +3,17 @@
         <input class=" o-input" :value="value" type="text" :disabled="disabled" :readonly="readonly" :error="error"
             @input="$emit('input', $event.target?.value)">
         <div v-if="error" class="error_wrapper">
-            <Icon name="warning"></Icon>
+            <svg class="warning">
+                <use :xlink:href="`#icon-warning`"></use>
+            </svg>
             <span>{{ error }}</span>
         </div>
     </div>
 </template>
 <script lang="ts">
-import Icon from '../button/icon.vue'
 export default {
     name: "optimal-input",
     components: {
-        Icon
     },
     props: {
         value: {
@@ -46,6 +46,11 @@ $error-color: #f1453d;
     display: inline-flex;
     vertical-align: middle;
     align-items: center;
+
+    .warning {
+        width: 1.2em;
+        height: 1.2em;
+    }
 
     >input {
         display: inline-flex;

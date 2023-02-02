@@ -4,7 +4,7 @@
             <o-button><span>默认按钮</span></o-button>
             <o-button name="setting">默认按钮</o-button>
             <o-button name="setting" icon-position="right">默认按钮</o-button>
-            <o-button :loading="true">默认按钮</o-button>
+            <o-button :loading="loadingStatus1" @click="loadingStatus1 = !loadingStatus1">默认按钮</o-button>
             <o-button disabled>默认按钮</o-button>
             <o-button-group class="button-group">
                 <o-button name="back"><span>上页</span> </o-button>
@@ -23,6 +23,13 @@ export default {
         'o-button': Button,
         'o-button-group': ButtonGroup,
     },
+    data() {
+        return {
+            loadingStatus1: true,
+            loadingStatus2: false,
+            loadingStatus3: false,
+        }
+    }
 }
 </script>
 <style lang="scss">

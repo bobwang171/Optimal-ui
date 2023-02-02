@@ -19,7 +19,7 @@ module.exports = {
                 children: [
                     '/button/',
                     '/input/',
-                    '/grid/',
+                    '/layout/',
                     '/tabs/',
                     '/toast/',
                     '/collapse/',
