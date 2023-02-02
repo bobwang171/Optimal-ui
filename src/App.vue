@@ -25,6 +25,7 @@ export default {
 
 <template>
   <div id="app" class="app">
+    <o-button name="setting">默认按钮</o-button>
     <o-tabs :selected.sync="selectedTab">
       <o-tabs-head>
         <template slot="actions">
