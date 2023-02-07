@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Toast - 弹出提示 | Optimal UI</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <script src="//at.alicdn.com/t/c/font_3824556_0tb9b4otg41.js"></script>
+    <meta name="description" content="一个好用的UI框架">
+    
+    <link rel="preload" href="/assets/css/0.styles.36f38110.css" as="style"><link rel="preload" href="/assets/js/app.5f73cc18.js" as="script"><link rel="preload" href="/assets/js/2.2cc4b1aa.js" as="script"><link rel="preload" href="/assets/js/19.7955a29f.js" as="script"><link rel="prefetch" href="/assets/js/10.c4968ace.js"><link rel="prefetch" href="/assets/js/11.f2e9a531.js"><link rel="prefetch" href="/assets/js/12.159e1521.js"><link rel="prefetch" href="/assets/js/13.f6d199b5.js"><link rel="prefetch" href="/assets/js/14.1a471088.js"><link rel="prefetch" href="/assets/js/15.dca63131.js"><link rel="prefetch" href="/assets/js/16.a05002cb.js"><link rel="prefetch" href="/assets/js/17.8b0b65f2.js"><link rel="prefetch" href="/assets/js/18.a1f00abf.js"><link rel="prefetch" href="/assets/js/3.1f03bec0.js"><link rel="prefetch" href="/assets/js/4.8b571742.js"><link rel="prefetch" href="/assets/js/5.14ffe85e.js"><link rel="prefetch" href="/assets/js/6.de26ab95.js"><link rel="prefetch" href="/assets/js/7.1d8660a9.js"><link rel="prefetch" href="/assets/js/8.71a2cfd3.js"><link rel="prefetch" href="/assets/js/9.19911f99.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.36f38110.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Optimal UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/install/" class="sidebar-link">安装</a></li><li><a href="/get-started/" class="sidebar-link">快速上手</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/button/" class="sidebar-link">Button - 按钮</a></li><li><a href="/input/" class="sidebar-link">Input - 输入框</a></li><li><a href="/layout/" class="sidebar-link">Layout - 布局</a></li><li><a href="/tabs/" class="sidebar-link">Tabs - 标签</a></li><li><a href="/toast/" aria-current="page" class="active sidebar-link">Toast - 弹出提示</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/toast/#预览" class="sidebar-link">预览</a></li><li class="sidebar-sub-header"><a href="/toast/#使用方法" class="sidebar-link">使用方法</a></li><li class="sidebar-sub-header"><a href="/toast/#选项" class="sidebar-link">选项</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="toast-弹出提示"><a href="#toast-弹出提示" class="header-anchor">#</a> Toast - 弹出提示</h1> <h2 id="预览"><a href="#预览" class="header-anchor">#</a> 预览</h2> <!----> <h2 id="使用方法"><a href="#使用方法" class="header-anchor">#</a> 使用方法</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;i-button @click=&quot;auto&quot;&gt;设置 zIndex&lt;/i-button&gt;&amp;nbsp;&amp;nbsp;
+    &lt;i-button @click=&quot;auto&quot;&gt;会自动关闭&lt;/i-button&gt;&amp;nbsp;&amp;nbsp;
+    &lt;i-button @click=&quot;auto&quot;&gt;点击按钮才关闭&lt;/i-button&gt;&amp;nbsp;&amp;nbsp;
+    &lt;i-button @click=&quot;auto&quot;&gt;支持 HTML 语法&lt;/i-button&gt;&amp;nbsp;&amp;nbsp;
+    &lt;br&gt;
+    &lt;i-button @click=&quot;top&quot;&gt;上方弹出&lt;/i-button&gt;
+    &lt;i-button @click=&quot;middle&quot;&gt;中间弹出&lt;/i-button&gt;
+    &lt;i-button @click=&quot;bottom&quot;&gt;下方弹出&lt;/i-button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  import Vue from 'vue'
+  import Toast from '../../../src/Toast'
+  import Button from '../../../src/Button'
+  import plugin from '../../../src/plugin'
+  Vue.use(plugin)
+  export default {
+    components: {'o-toast': Toast, 'o-button': Button},
+    methods: {
+      auto() {
+        this.$toast('我是 toast 内容', {
+          zIndex:30,
+          autoClose: 5,
+          closeButton: {
+          text:'确定',
+            callback:()=&gt;{
+            console.log('回调的输出')
+            }
+          },
+          enableHTML:true
+        })
+      },
+      top(){
+        this.$toast('我是 toast 内容', { position: 'top' })
+      },
+      middle(){
+        this.$toast('我是 toast 内容', { position: 'middle' })
+      },
+      bottom(){
+        this.$toast('我是 toast 内容', { position: 'bottom' })
+      },
+    }
+  }
+&lt;/script&gt;
+</code></pre></div><h2 id="选项"><a href="#选项" class="header-anchor">#</a> 选项</h2> <ul><li><p><code>zIndex</code><br>
+此选项用于设定 Toast 组件在当前堆叠上下文中的堆叠层级。默认为20。(这是因为再使用 vuepress 编写文档时发现值为 20 才有效。)
+若你的项目不可见 Toast 组件，尝试传入一个 zIndex 试试。</p></li> <li><p><code>autoClose</code> <br>
+此选项可以设定 Toast 自动关闭的延时。单位为“ 秒 ”，默认延时 5 秒后自动关闭。</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;i-button @click=&quot;auto&quot;&gt;自动关闭的 Toast&lt;/i-button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  import Vue from 'vue'
+  import Toast from '../../../src/Toast'
+  import Button from '../../../src/Button'
+  import plugin from '../../../src/plugin'
+  Vue.use(plugin)
+  export default {
+    components: { 'i-toast': Toast, 'i-button': Button },
+    methods: {
+      auto() { this.$toast('我是 toast 内容', { autoClose: 5, }) }
+    }
+  }
+&lt;/script&gt;
+</code></pre></div><ul><li><code>closeButton</code><br>
+Toast 组件的右侧按钮文本可编辑，并且支持传入一个回调。 <code>closeButton</code> 选项接收一个对象。对象包括 text 与 callback 属性。用于设定按钮的文本与回调。</li></ul> <div class="language- extra-class"><pre class="language-text"><code>
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;i-button @click=&quot;auto&quot;&gt;点我&lt;/i-button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  import Vue from 'vue'
+  import Toast from '../../../src/Toast'
+  import Button from '../../../src/Button'
+  import plugin from '../../../src/plugin'
+
+  Vue.use(plugin)
+  export default {
+    components: {'o-toast': Toast, 'o-button': Button},
+    methods: {
+      auto() {
+        this.$toast('我是 toast 内容', 
+         {autoClose: 5, closeButton: { text:'确定', callback:()=&gt;{ console.log('回调的输出') } } }
+        )
+      }
+    }
+  }
+&lt;/script&gt;
+</code></pre></div><ul><li><p><code>enableHtml</code><br>
+Toast 组件还支持 HTML 语法，该功能默认关闭，你需要传递一个 enableHTML 参数来开启它, <code>enableHtml:true</code> 。 开启后就可以在 Toast 内容区域写 HTML 语法。</p></li> <li><p><code>position</code><br>
+可以设定 Toast 弹出的位置 ，支持 top, middle, bottom 三个值。</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>this.$toast('我是 toast 内容', { position: 'top' })
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tabs/" class="prev">
+        Tabs - 标签
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5f73cc18.js" defer></script><script src="/assets/js/2.2cc4b1aa.js" defer></script><script src="/assets/js/19.7955a29f.js" defer></script>
+  </body>
+</html>

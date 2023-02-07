@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tabs - 标签 | Optimal UI</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <script src="//at.alicdn.com/t/c/font_3824556_0tb9b4otg41.js"></script>
+    <meta name="description" content="一个好用的UI框架">
+    
+    <link rel="preload" href="/assets/css/0.styles.36f38110.css" as="style"><link rel="preload" href="/assets/js/app.5f73cc18.js" as="script"><link rel="preload" href="/assets/js/2.2cc4b1aa.js" as="script"><link rel="preload" href="/assets/js/18.a1f00abf.js" as="script"><link rel="preload" href="/assets/js/4.8b571742.js" as="script"><link rel="prefetch" href="/assets/js/10.c4968ace.js"><link rel="prefetch" href="/assets/js/11.f2e9a531.js"><link rel="prefetch" href="/assets/js/12.159e1521.js"><link rel="prefetch" href="/assets/js/13.f6d199b5.js"><link rel="prefetch" href="/assets/js/14.1a471088.js"><link rel="prefetch" href="/assets/js/15.dca63131.js"><link rel="prefetch" href="/assets/js/16.a05002cb.js"><link rel="prefetch" href="/assets/js/17.8b0b65f2.js"><link rel="prefetch" href="/assets/js/19.7955a29f.js"><link rel="prefetch" href="/assets/js/3.1f03bec0.js"><link rel="prefetch" href="/assets/js/5.14ffe85e.js"><link rel="prefetch" href="/assets/js/6.de26ab95.js"><link rel="prefetch" href="/assets/js/7.1d8660a9.js"><link rel="prefetch" href="/assets/js/8.71a2cfd3.js"><link rel="prefetch" href="/assets/js/9.19911f99.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.36f38110.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Optimal UI</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/install/" class="sidebar-link">安装</a></li><li><a href="/get-started/" class="sidebar-link">快速上手</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/button/" class="sidebar-link">Button - 按钮</a></li><li><a href="/input/" class="sidebar-link">Input - 输入框</a></li><li><a href="/layout/" class="sidebar-link">Layout - 布局</a></li><li><a href="/tabs/" aria-current="page" class="active sidebar-link">Tabs - 标签</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tabs/#预览" class="sidebar-link">预览</a></li><li class="sidebar-sub-header"><a href="/tabs/#使用方法" class="sidebar-link">使用方法</a></li><li class="sidebar-sub-header"><a href="/tabs/#选项" class="sidebar-link">选项</a></li></ul></li><li><a href="/toast/" class="sidebar-link">Toast - 弹出提示</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="tabs-标签"><a href="#tabs-标签" class="header-anchor">#</a> Tabs - 标签</h1> <h2 id="预览"><a href="#预览" class="header-anchor">#</a> 预览</h2> <div class="tabs"><div class="tabs-head" data-v-264be6a3> <div class="tabs-item" data-v-a70c2526>Tab1</div> <div class="tabs-item" data-v-a70c2526>Tab2</div> <div class="tabs-item" data-v-a70c2526>Tab3</div> <div class="actions_wrapper" data-v-264be6a3><button data-v-264be6a3>设置</button></div></div> <div class="tabs-body"><!----> <!----> <!----></div></div> <h2 id="使用方法"><a href="#使用方法" class="header-anchor">#</a> 使用方法</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div class=&quot;tabs-wrapper&quot;&gt;
+    &lt;i-tabs :selected.sync=&quot;selectedTab&quot;&gt;
+      &lt;i-tabs-head&gt;
+        &lt;i-tabs-item name='tab1'&gt;
+          &lt;i-icon icon-name=&quot;settings&quot;&gt;&lt;/i-icon&gt;
+          Tab1
+        &lt;/i-tabs-item&gt;
+        &lt;i-tabs-item name='tab2'&gt;Tab2&lt;/i-tabs-item&gt;
+        &lt;i-tabs-item name='tab3'&gt;Tab3&lt;/i-tabs-item&gt;
+        &lt;i-tabs-item name='tab4'&gt;Tab4&lt;/i-tabs-item&gt;
+      &lt;/i-tabs-head&gt;
+      &lt;i-tabs-body&gt;
+        &lt;i-tabs-pane name='tab1'&gt;内容1&lt;/i-tabs-pane&gt;
+        &lt;i-tabs-pane name='tab2'&gt;内容2&lt;/i-tabs-pane&gt;
+        &lt;i-tabs-pane name='tab3'&gt;内容3&lt;/i-tabs-pane&gt;
+        &lt;i-tabs-pane name='tab4'&gt;内容4&lt;/i-tabs-pane&gt;
+      &lt;/i-tabs-body&gt;
+    &lt;/i-tabs&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  export default {
+    data() { return { selectedTab: 'tab1' } }
+  }
+&lt;/script&gt;
+</code></pre></div><h2 id="选项"><a href="#选项" class="header-anchor">#</a> 选项</h2> <ul><li><p><code>o-tabs</code> <code>o-tabs-item</code> <code>o-tabs-pane</code> 组件中必须具备一一对应的<code>name</code>属性。</p></li> <li><p><code>o-tabs</code>组件可以通过设置<code>selected</code>属性来确定默认标签。</p></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/layout/" class="prev">
+        Layout - 布局
+      </a></span> <span class="next"><a href="/toast/">
+        Toast - 弹出提示
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.5f73cc18.js" defer></script><script src="/assets/js/2.2cc4b1aa.js" defer></script><script src="/assets/js/18.a1f00abf.js" defer></script><script src="/assets/js/4.8b571742.js" defer></script>
+  </body>
+</html>
