@@ -11,7 +11,7 @@ export default {
         selected: {
             type: String,
             required: true,
-            default: "sports"
+            default: "tab1"
         },
         direction: {
             type: String,

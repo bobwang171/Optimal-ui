@@ -22,7 +22,7 @@ import plugin from './plugin.js'
 import './style/var.scss'
 
 
-Vue.component("o-button", Button)
+Vue.component("o-button", Button)                           
 Vue.component("o-button-group", ButtonGroup)
 Vue.component("o-input", Input)
 Vue.component("o-row", Row)

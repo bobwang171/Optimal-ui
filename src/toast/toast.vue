@@ -95,7 +95,7 @@ $min-height: 40px;
 
     100% {
         opacity: 1;
-        transform: translateY(0)
+        transform: translateY(0%)
     }
 }
 
@@ -129,6 +129,7 @@ $min-height: 40px;
         position: absolute;
         top: 8px;
         animation: fade-in-top 0.5s;
+        z-index: 21;
     }
 
     &.position-bottom {

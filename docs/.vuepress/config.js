@@ -22,7 +22,6 @@ module.exports = {
                     '/layout/',
                     '/tabs/',
                     '/toast/',
-                    '/collapse/',
                 ]
               },
 
