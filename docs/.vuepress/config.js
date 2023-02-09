@@ -1,7 +1,24 @@
 module.exports = {
     title: "Optimal UI",
-    description:"一个好用的UI框架",
+    description:"一个好用的UI组件库",
     themeConfig: {
+        mode: 'dark',
+        modePicker:true,
+        nav: [
+            {
+                text: '主页',
+                link:'/'
+            },
+            {
+                text: '文档',
+                link:'/install/'
+            }, 
+            {
+                text: 'Github',
+                link:'https://github.com/bobwang171/Optimal-ui/'
+            }
+            
+        ],
         sidebar: [
             {
                 title: '入门',   // 必要的
